@@ -1,0 +1,58 @@
+Removed Pin From Net: NetName=NetR31_2 Pin=U4-1
+Removed Pin From Net: NetName=GND Pin=U4-2
+Removed Pin From Net: NetName=NetR33_2 Pin=U4-3
+Removed Pin From Net: NetName=NetR34_2 Pin=U4-4
+Removed Pin From Net: NetName=3V3 Pin=U4-5
+Removed Pin From Net: NetName=NetR32_2 Pin=U4-6
+Removed Pin From Net: NetName=GND Pin=U5-0
+Change component parameters: Designator = "C5" ("C5"); Footprint = "C 0402_L"; UniqueID = "\KUHTCEVT" ("\KUHTCEVT")
+Change component parameters (AddParameter): Name = "主类型"; Value = "电容"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "值/型号"; Value = "100nF/16V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "值精度"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "元件封装"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "具体类型"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "官网地址"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "封装类型"; Value = "贴片"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "手册网址"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "温度漂移"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "温度范围"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "生产商"; Value = "YAGEO(国巨)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "生产商零件编码"; Value = "CC0402KRX7R7BB104"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "立创编号"; Value = "C60474 "; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "类型备注"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "C7" ("C7"); Footprint = "C 0402_L"; UniqueID = "\JISBFFOS" ("\JISBFFOS")
+Change component parameters (AddParameter): Name = "主类型"; Value = "电容"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "值/型号"; Value = "100nF/16V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "值精度"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "元件封装"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "具体类型"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "官网地址"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "封装类型"; Value = "贴片"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "手册网址"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "温度漂移"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "温度范围"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "生产商"; Value = "YAGEO(国巨)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "生产商零件编码"; Value = "CC0402KRX7R7BB104"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "立创编号"; Value = "C60474 "; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "类型备注"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U4(TMP102)
+Added Pin To Net: NetName=NetR31_2 Pin=U4-1
+Added Pin To Net: NetName=GND Pin=U4-2
+Added Pin To Net: NetName=NetR33_2 Pin=U4-3
+Added Pin To Net: NetName=NetR32_2 Pin=U4-4
+Added Pin To Net: NetName=3V3 Pin=U4-5
+Added Pin To Net: NetName=NetR34_2 Pin=U4-6
+Added Member To Class: ClassName=TMP102 Member=Component C13 100nF/16V
+Added Member To Class: ClassName=OPT3001 Member=Component C15 100nF/16V
+Added Member To Class: ClassName=BME280 Member=Component R17 10K
+Added Member To Class: ClassName=BME280 Member=Component R20 NOT
+Added Member To Class: ClassName=BME280 Member=Component R21 0
+Added Member To Class: ClassName=BME280 Member=Component R25 NOT
+Added Member To Class: ClassName=TMP102 Member=Component R31 0
+Added Member To Class: ClassName=TMP102 Member=Component R32 0
+Added Member To Class: ClassName=TMP102 Member=Component R33 0
+Added Member To Class: ClassName=TMP102 Member=Component R34 0
+Added Member To Class: ClassName=OPT3001 Member=Component R38 0
+Added Member To Class: ClassName=OPT3001 Member=Component R39 0
+Added Member To Class: ClassName=OPT3001 Member=Component R40 0
+Added Member To Class: ClassName=OPT3001 Member=Component R41 0

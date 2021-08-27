@@ -1,0 +1,81 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.29.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information:  ,  , LIC=ATTQ1-CXN9N-Y8DFK-ZKPID-RZ7P9-4KWGQ
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.29.0.0
+Toolchain Path:  E:\Keil5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.29.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.2.0
+Target DLL:      CMSIS_AGDI.dll V1.32.0.0
+Dialog DLL:      TARMCM1.DLL V1.14.1.0
+ 
+<h2>Project:</h2>
+F:\Github\MR-Z-Mini-oscilloscope\Single_module_development\15.sensor\Example\STM32G0_OPT3001\MDK-ARM\STM32G0_OPT3001.uvprojx
+Project File Date:  08/27/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'E:\Keil5\ARM\ARMCC\Bin'
+Build target 'STM32G0_OPT3001'
+compiling main.c...
+compiling stm32g0xx_it.c...
+compiling OPT3001.c...
+..\Core\Src\OPT3001.c(80): warning:  #940-D: missing return statement at end of non-void function "OPT3001_Init" 
+  }
+..\Core\Src\OPT3001.c(119): warning:  #940-D: missing return statement at end of non-void function "OPT3001_Write_High_Limit" 
+  }
+..\Core\Src\OPT3001.c(132): warning:  #940-D: missing return statement at end of non-void function "OPT3001_Write_Low_Limit" 
+  }
+..\Core\Src\OPT3001.c(289): warning:  #940-D: missing return statement at end of non-void function "OPT3001_Reset" 
+  }
+..\Core\Src\OPT3001.c(299): warning:  #870-D: invalid multibyte character sequence
+      printf("ä½Žä¸­æ–? \r\n");
+..\Core\Src\OPT3001.c(304): warning:  #870-D: invalid multibyte character sequence
+      printf("é«˜ä¸­æ–? \r\n");
+..\Core\Src\OPT3001.c(306): warning:  #940-D: missing return statement at end of non-void function "OPT3001_INT" 
+  }
+..\Core\Src\OPT3001.c(362): warning:  #111-D: statement is unreachable
+      return RE_NUM;
+..\Core\Src\OPT3001.c(423): warning:  #1-D: last line of file ends without a newline
+  }
+..\Core\Src\OPT3001.c: 9 warnings, 0 errors
+linking...
+Program Size: Code=9014 RO-data=342 RW-data=20 ZI-data=1396  
+FromELF: creating hex file...
+"STM32G0_OPT3001\STM32G0_OPT3001.axf" - 0 Error(s), 9 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.6.0.pack
+                ARM.CMSIS.5.6.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.3.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32G0xx_DFP.1.2.0.pack
+                Keil.STM32G0xx_DFP.1.2.0
+                STMicroelectronics STM32G0 Series Device Support
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_STM32G0_OPT3001
+  E:\Keil5pack\ARM\CMSIS\5.6.0\CMSIS\Core\Include
+  E:\Keil5pack\Keil\STM32G0xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G0xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.3.0
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

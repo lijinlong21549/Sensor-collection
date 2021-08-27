@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=GND Pin=U5-0
+Added Component: Designator=JP1(HDR2.54-LI-16P)
+Add component (AddParameter): Name = "BOM名称"; Value = "16P接插件"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=BMX160 Member=Component R2 10K
+Added Member To Class: ClassName=BMX160 Member=Component R4 10K
+Added Member To Class: ClassName=BMX160 Member=Component R11 NOT
+Added Room: Name=BME280
+Added Room: Name=BMX160
+Added Room: Name=OPT3001
+Added Room: Name=OUT_PIN
+Added Room: Name=POW
+Added Room: Name=TMP102

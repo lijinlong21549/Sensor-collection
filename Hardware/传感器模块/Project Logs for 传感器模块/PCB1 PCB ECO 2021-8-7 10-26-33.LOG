@@ -1,0 +1,17 @@
+Added Pin To Net: NetName=SDL Pin=JP1-1
+Added Pin To Net: NetName=SDA Pin=JP1-2
+Added Pin To Net: NetName=TMP102_INT Pin=JP1-3
+Added Pin To Net: NetName=OPT3001_INT Pin=JP1-4
+Added Pin To Net: NetName=BMX160_INT1 Pin=JP1-5
+Added Pin To Net: NetName=BMX160_INT2 Pin=JP1-6
+Added Pin To Net: NetName=BMX160_CSB Pin=JP1-7
+Added Pin To Net: NetName=BMX160_SCL Pin=JP1-8
+Added Pin To Net: NetName=BMX160_SDI Pin=JP1-9
+Added Pin To Net: NetName=BMX160_SDO Pin=JP1-10
+Added Pin To Net: NetName=BME280_CSB Pin=JP1-11
+Added Pin To Net: NetName=BME280_SCL Pin=JP1-12
+Added Pin To Net: NetName=BME280_SDI Pin=JP1-13
+Added Pin To Net: NetName=BME280_SDO Pin=JP1-14
+Added Pin To Net: NetName=GND Pin=JP1-15
+Added Pin To Net: NetName=+5V Pin=JP1-16
+Added Member To Class: ClassName=OUT_PIN Member=Component JP1 HDR-1X16

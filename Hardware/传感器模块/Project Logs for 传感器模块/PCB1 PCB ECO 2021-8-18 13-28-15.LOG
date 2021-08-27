@@ -1,0 +1,195 @@
+Removed Pin From Net: NetName=3V3 Pin=C13-1
+Removed Pin From Net: NetName=GND Pin=C13-2
+Removed Pin From Net: NetName=3V3 Pin=C15-1
+Removed Pin From Net: NetName=GND Pin=C15-2
+Removed Pin From Net: NetName=TMP102_SDL Pin=R31-1
+Removed Pin From Net: NetName=NetR31_2 Pin=R31-2
+Removed Pin From Net: NetName=TMP102_SDA Pin=R32-1
+Removed Pin From Net: NetName=NetR32_2 Pin=R32-2
+Removed Pin From Net: NetName=TMP102_INT Pin=R33-1
+Removed Pin From Net: NetName=NetR33_2 Pin=R33-2
+Removed Pin From Net: NetName=TMP102_ADD Pin=R34-1
+Removed Pin From Net: NetName=NetR34_2 Pin=R34-2
+Removed Pin From Net: NetName=OPT3001_SDL Pin=R38-1
+Removed Pin From Net: NetName=NetR38_2 Pin=R38-2
+Removed Pin From Net: NetName=OPT3001_SDA Pin=R39-1
+Removed Pin From Net: NetName=NetR39_2 Pin=R39-2
+Removed Pin From Net: NetName=OPT3001_INT Pin=R40-1
+Removed Pin From Net: NetName=NetR40_2 Pin=R40-2
+Removed Pin From Net: NetName=OPT3001_ADD Pin=R41-1
+Removed Pin From Net: NetName=NetR41_2 Pin=R41-2
+Removed Pin From Net: NetName=GND Pin=U5-0
+Added Component: Designator=C13(C 0402_L)
+Add component (AddParameter): Name = "主类型"; Value = "电容"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "值/型号"; Value = "100nF/16V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "值精度"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "元件封装"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "具体类型"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "官网地址"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "封装类型"; Value = "贴片"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "手册网址"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "温度漂移"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "温度范围"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "生产商"; Value = "YAGEO(国巨)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "生产商零件编码"; Value = "CC0402KRX7R7BB104"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "立创编号"; Value = "C60474"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "类型备注"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C15(C 0402_L)
+Add component (AddParameter): Name = "主类型"; Value = "电容"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "值/型号"; Value = "100nF/16V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "值精度"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "元件封装"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "具体类型"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "官网地址"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "封装类型"; Value = "贴片"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "手册网址"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "温度漂移"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "温度范围"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "生产商"; Value = "YAGEO(国巨)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "生产商零件编码"; Value = "CC0402KRX7R7BB104"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "立创编号"; Value = "C60474"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "类型备注"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R31(R 0402_L)
+Add component (AddParameter): Name = "主类型"; Value = "电阻"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "值/型号"; Value = "0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "值精度"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "元件封装"; Value = "0402"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "具体类型"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "封装类型"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "温度漂移"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "温度范围"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "生产商"; Value = "YAGEO(国巨)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "生产商零件编码"; Value = "RC0402JR-070RL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "立创编号"; Value = "C60485"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "类型备注"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R32(R 0402_L)
+Add component (AddParameter): Name = "主类型"; Value = "电阻"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "值/型号"; Value = "0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "值精度"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "元件封装"; Value = "0402"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "具体类型"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "封装类型"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "温度漂移"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "温度范围"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "生产商"; Value = "YAGEO(国巨)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "生产商零件编码"; Value = "RC0402JR-070RL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "立创编号"; Value = "C60485"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "类型备注"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R33(R 0402_L)
+Add component (AddParameter): Name = "主类型"; Value = "电阻"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "值/型号"; Value = "0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "值精度"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "元件封装"; Value = "0402"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "具体类型"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "封装类型"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "温度漂移"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "温度范围"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "生产商"; Value = "YAGEO(国巨)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "生产商零件编码"; Value = "RC0402JR-070RL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "立创编号"; Value = "C60485"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "类型备注"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R34(R 0402_L)
+Add component (AddParameter): Name = "主类型"; Value = "电阻"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "值/型号"; Value = "0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "值精度"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "元件封装"; Value = "0402"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "具体类型"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "封装类型"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "温度漂移"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "温度范围"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "生产商"; Value = "YAGEO(国巨)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "生产商零件编码"; Value = "RC0402JR-070RL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "立创编号"; Value = "C60485"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "类型备注"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R38(R 0402_L)
+Add component (AddParameter): Name = "主类型"; Value = "电阻"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "值/型号"; Value = "0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "值精度"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "元件封装"; Value = "0402"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "具体类型"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "封装类型"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "温度漂移"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "温度范围"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "生产商"; Value = "YAGEO(国巨)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "生产商零件编码"; Value = "RC0402JR-070RL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "立创编号"; Value = "C60485"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "类型备注"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R39(R 0402_L)
+Add component (AddParameter): Name = "主类型"; Value = "电阻"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "值/型号"; Value = "0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "值精度"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "元件封装"; Value = "0402"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "具体类型"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "封装类型"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "温度漂移"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "温度范围"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "生产商"; Value = "YAGEO(国巨)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "生产商零件编码"; Value = "RC0402JR-070RL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "立创编号"; Value = "C60485"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "类型备注"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R40(R 0402_L)
+Add component (AddParameter): Name = "主类型"; Value = "电阻"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "值/型号"; Value = "0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "值精度"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "元件封装"; Value = "0402"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "具体类型"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "封装类型"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "温度漂移"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "温度范围"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "生产商"; Value = "YAGEO(国巨)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "生产商零件编码"; Value = "RC0402JR-070RL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "立创编号"; Value = "C60485"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "类型备注"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R41(R 0402_L)
+Add component (AddParameter): Name = "主类型"; Value = "电阻"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "值/型号"; Value = "0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "值精度"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "元件封装"; Value = "0402"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "具体类型"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "封装类型"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "温度漂移"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "温度范围"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "生产商"; Value = "YAGEO(国巨)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "生产商零件编码"; Value = "RC0402JR-070RL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "立创编号"; Value = "C60485"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "类型备注"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U3(BME280)
+Added Pin To Net: NetName=3V3 Pin=C13-1
+Added Pin To Net: NetName=GND Pin=C13-2
+Added Pin To Net: NetName=3V3 Pin=C15-1
+Added Pin To Net: NetName=GND Pin=C15-2
+Added Pin To Net: NetName=TMP102_SDL Pin=R31-1
+Added Pin To Net: NetName=NetR31_2 Pin=R31-2
+Added Pin To Net: NetName=TMP102_SDA Pin=R32-1
+Added Pin To Net: NetName=NetR32_2 Pin=R32-2
+Added Pin To Net: NetName=TMP102_INT Pin=R33-1
+Added Pin To Net: NetName=NetR33_2 Pin=R33-2
+Added Pin To Net: NetName=TMP102_ADD Pin=R34-1
+Added Pin To Net: NetName=NetR34_2 Pin=R34-2
+Added Pin To Net: NetName=OPT3001_SDL Pin=R38-1
+Added Pin To Net: NetName=NetR38_2 Pin=R38-2
+Added Pin To Net: NetName=OPT3001_SDA Pin=R39-1
+Added Pin To Net: NetName=NetR39_2 Pin=R39-2
+Added Pin To Net: NetName=OPT3001_INT Pin=R40-1
+Added Pin To Net: NetName=NetR40_2 Pin=R40-2
+Added Pin To Net: NetName=OPT3001_ADD Pin=R41-1
+Added Pin To Net: NetName=NetR41_2 Pin=R41-2
+Added Pin To Net: NetName=GND Pin=U3-1
+Added Pin To Net: NetName=NetR26_2 Pin=U3-2
+Added Pin To Net: NetName=NetR24_2 Pin=U3-3
+Added Pin To Net: NetName=NetR20_2 Pin=U3-4
+Added Pin To Net: NetName=NetR22_2 Pin=U3-5
+Added Pin To Net: NetName=3V3 Pin=U3-6
+Added Pin To Net: NetName=GND Pin=U3-7
+Added Pin To Net: NetName=3V3 Pin=U3-8
+Added Member To Class: ClassName=TMP102 Member=Component C13 100nF/16V
+Added Member To Class: ClassName=OPT3001 Member=Component C15 100nF/16V
+Added Member To Class: ClassName=TMP102 Member=Component R31 0
+Added Member To Class: ClassName=TMP102 Member=Component R32 0
+Added Member To Class: ClassName=TMP102 Member=Component R33 0
+Added Member To Class: ClassName=TMP102 Member=Component R34 0
+Added Member To Class: ClassName=OPT3001 Member=Component R38 0
+Added Member To Class: ClassName=OPT3001 Member=Component R39 0
+Added Member To Class: ClassName=OPT3001 Member=Component R40 0
+Added Member To Class: ClassName=OPT3001 Member=Component R41 0
+Added Member To Class: ClassName=BME280 Member=Component U3 BME280

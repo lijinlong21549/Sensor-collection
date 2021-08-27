@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=NetR31_2 Pin=U4-1
+Removed Pin From Net: NetName=GND Pin=U4-2
+Removed Pin From Net: NetName=NetR33_2 Pin=U4-3
+Removed Pin From Net: NetName=NetR34_2 Pin=U4-4
+Removed Pin From Net: NetName=3V3 Pin=U4-5
+Removed Pin From Net: NetName=NetR32_2 Pin=U4-6
+Removed Pin From Net: NetName=GND Pin=U5-0
+Added Component: Designator=U4(TMP102)
+Added Pin To Net: NetName=NetR31_2 Pin=U4-1
+Added Pin To Net: NetName=GND Pin=U4-2
+Added Pin To Net: NetName=NetR33_2 Pin=U4-3
+Added Pin To Net: NetName=NetR32_2 Pin=U4-4
+Added Pin To Net: NetName=3V3 Pin=U4-5
+Added Pin To Net: NetName=NetR34_2 Pin=U4-6
+Added Member To Class: ClassName=TMP102 Member=Component U4 TMP102
