@@ -91,6 +91,7 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 	OPT3001_Init();
+	float DATA=0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -100,6 +101,9 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+		OPT3001_Read_Brightness(&Eye_1,&DATA);
+		printf("¡¡∂»£∫%f\n",DATA);
+		HAL_Delay(850);
   }
   /* USER CODE END 3 */
 }

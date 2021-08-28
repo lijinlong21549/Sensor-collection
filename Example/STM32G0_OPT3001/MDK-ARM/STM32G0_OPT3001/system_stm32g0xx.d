@@ -2,7 +2,7 @@ stm32g0_opt3001\system_stm32g0xx.o: ../Core/Src/system_stm32g0xx.c
 stm32g0_opt3001\system_stm32g0xx.o: ../Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h
 stm32g0_opt3001\system_stm32g0xx.o: ../Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h
 stm32g0_opt3001\system_stm32g0xx.o: ../Drivers/CMSIS/Include/core_cm0plus.h
-stm32g0_opt3001\system_stm32g0xx.o: E:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
+stm32g0_opt3001\system_stm32g0xx.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 stm32g0_opt3001\system_stm32g0xx.o: ../Drivers/CMSIS/Include/cmsis_version.h
 stm32g0_opt3001\system_stm32g0xx.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 stm32g0_opt3001\system_stm32g0xx.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -14,7 +14,7 @@ stm32g0_opt3001\system_stm32g0xx.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0x
 stm32g0_opt3001\system_stm32g0xx.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h
 stm32g0_opt3001\system_stm32g0xx.o: ../Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h
 stm32g0_opt3001\system_stm32g0xx.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-stm32g0_opt3001\system_stm32g0xx.o: E:\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
+stm32g0_opt3001\system_stm32g0xx.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 stm32g0_opt3001\system_stm32g0xx.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h
 stm32g0_opt3001\system_stm32g0xx.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h
 stm32g0_opt3001\system_stm32g0xx.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h

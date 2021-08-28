@@ -3,16 +3,14 @@
         {
             "name": "STM32G0_OPT3001",
             "includePath": [
-                "f:\\Github\\MR-Z-Mini-oscilloscope\\Single_module_development\\15.sensor\\Example\\STM32G0_OPT3001\\Core\\Inc",
-                "f:\\Github\\MR-Z-Mini-oscilloscope\\Single_module_development\\15.sensor\\Example\\STM32G0_OPT3001\\Drivers\\STM32G0xx_HAL_Driver\\Inc",
-                "f:\\Github\\MR-Z-Mini-oscilloscope\\Single_module_development\\15.sensor\\Example\\STM32G0_OPT3001\\Drivers\\STM32G0xx_HAL_Driver\\Inc\\Legacy",
-                "f:\\Github\\MR-Z-Mini-oscilloscope\\Single_module_development\\15.sensor\\Example\\STM32G0_OPT3001\\Drivers\\CMSIS\\Device\\ST\\STM32G0xx\\Include",
-                "f:\\Github\\MR-Z-Mini-oscilloscope\\Single_module_development\\15.sensor\\Example\\STM32G0_OPT3001\\Drivers\\CMSIS\\Include",
-                "E:\\Keil5\\ARM\\ARMCC\\include",
-                "E:\\Keil5\\ARM\\ARMCC\\include\\rw",
-                "f:\\Github\\MR-Z-Mini-oscilloscope\\Single_module_development\\15.sensor\\Example\\STM32G0_OPT3001\\MDK-ARM",
-                "f:\\Github\\MR-Z-Mini-oscilloscope\\Single_module_development\\15.sensor\\Example\\STM32G0_OPT3001\\Core\\Src",
-                "f:\\Github\\MR-Z-Mini-oscilloscope\\Single_module_development\\15.sensor\\Example\\STM32G0_OPT3001\\Drivers\\STM32G0xx_HAL_Driver\\Src"
+                "h:\\Github\\Module\\Sensor-collection\\Example\\STM32G0_OPT3001\\Core\\Inc",
+                "h:\\Github\\Module\\Sensor-collection\\Example\\STM32G0_OPT3001\\Drivers\\STM32G0xx_HAL_Driver\\Inc",
+                "h:\\Github\\Module\\Sensor-collection\\Example\\STM32G0_OPT3001\\Drivers\\STM32G0xx_HAL_Driver\\Inc\\Legacy",
+                "h:\\Github\\Module\\Sensor-collection\\Example\\STM32G0_OPT3001\\Drivers\\CMSIS\\Device\\ST\\STM32G0xx\\Include",
+                "h:\\Github\\Module\\Sensor-collection\\Example\\STM32G0_OPT3001\\Drivers\\CMSIS\\Include",
+                "h:\\Github\\Module\\Sensor-collection\\Example\\STM32G0_OPT3001\\MDK-ARM",
+                "h:\\Github\\Module\\Sensor-collection\\Example\\STM32G0_OPT3001\\Core\\Src",
+                "h:\\Github\\Module\\Sensor-collection\\Example\\STM32G0_OPT3001\\Drivers\\STM32G0xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",

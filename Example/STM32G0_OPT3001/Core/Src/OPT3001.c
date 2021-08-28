@@ -3,8 +3,8 @@
 #include "usart.h"
 #include <math.h>
 /**
-* @brief  åˆå§‹åŒ–å¹¶åˆ›å»ºä¸€ä¸ªOPT3001çš„è®¾å¤‡
-* @retval ç©ºå€¼
+* @brief  ³õÊ¼»¯²¢´´½¨Ò»¸öOPT3001µÄÉè±¸
+* @retval ¿ÕÖµ
 */
 
 int OPT3001_Read_Device_ID(OPT3001 *OPT3001);
@@ -26,76 +26,78 @@ uint16_t Bit_Modification(uint16_t Reg, int Bit_Start, int Bit_Stop, uint16_t Va
 OPT3001 Eye_1;
 int OPT3001_Init(void)
 {
-  /********ç”¨æˆ·å‚æ•°********/
-  //INTè„šä½
+  /********ÓÃ»§²ÎÊı********/
+  //INT½ÅÎ»
   Eye_1.INT_Pin = OPT3001_INT_Pin;
   Eye_1.INT_Prot = OPT3001_INT_GPIO_Port;
-  //ä½¿ç”¨çš„IIC
+  //Ê¹ÓÃµÄIIC
   Eye_1.IIC_Aisle = hi2c1;
   Eye_1.IIC_ADDR = 0x45;
-  //ä½é˜ˆå€¼
+  //µÍãĞÖµ
   Eye_1.Low_Limit = 200;
-  //é«˜é˜ˆå€¼
+  //¸ßãĞÖµ
   Eye_1.High_Limit = 60000;
-  //å½“å‰é‡ç¨‹
+  //µ±Ç°Á¿³Ì
   Eye_1.Configuration.Range = Range_AUTO;
-  //è½¬æ¢æ—¶é—´
+  //×ª»»Ê±¼ä
   Eye_1.Configuration.Conversion_Time = completely_Conversion;
-  //è½¬æ¢æ¨¡å¼
+  //×ª»»Ä£Ê½
   Eye_1.Configuration.Conversion_Mode = continuous;
-  //INTææ€§
+  //INT¼«ĞÔ
   Eye_1.Configuration.Polarity_Field_Bit = Low_efficient;
-  //æ•…éšœè®¡æ•°å­—æ®µ
+  //¹ÊÕÏ¼ÆÊı×Ö¶Î
   Eye_1.Configuration.Fault_Count_Field_Bit = Fault_One;
-  //å±è”½æŒ‡æ•°å­—æ®µ
+  //ÆÁ±ÎÖ¸Êı×Ö¶Î
   Eye_1.Configuration.Mask_Exponent_Field_Bit = Exponent_show;
-  //ä¸­æ–­æ¨¡å¼
+  //ÖĞ¶ÏÄ£Ê½
   Eye_1.Configuration.Latch_field_Bit = latched_Window_style;
 
-  /********ä¼ é€’å‚æ•°********/
-  //è¯»å–ä¸¤ä¸ªID
+  /********´«µİ²ÎÊı********/
+  //¶ÁÈ¡Á½¸öID
   Eye_1.Manufacturer_ID = 0;
   Eye_1.Device_ID = 0;
-  /********åˆå§‹åŒ–ç¨‹åº********/
-  //å¤ä½OPT3001
+  /********³õÊ¼»¯³ÌĞò********/
+  //¸´Î»OPT3001
   OPT3001_Reset(&Eye_1);
-  //è¯»å–ç”Ÿäº§å‚å•†IDå’Œè®¾å¤‡ID
+  //¶ÁÈ¡Éú²ú³§ÉÌIDºÍÉè±¸ID
   OPT3001_Read_Manufacturer_ID(&Eye_1);
   OPT3001_Read_Device_ID(&Eye_1);
   HAL_Delay(1);
   if ((Eye_1.Manufacturer_ID == 0x5449) & (Eye_1.Device_ID == 0x3001))
   {
-    printf("è¯†åˆ«åˆ°OPT3001\r\n");
+    printf("ÒÑÊ¶±ğµ½");
+		printf("OPT3001\r\n");
   }
   else
   {
-    printf("æœªè¯†åˆ«åˆ°OPT3001\r\n");
+    printf("Î´Ê¶±ğµ½");
+		printf("OPT3001\r\n");
     return OPT3001_Error;
   }
-  //å°†ä¸Šè¿°é…ç½®å‚æ•°ä¸Šä¼ åˆ°é…ç½®å¯„å­˜å™¨å’Œä¸Šä¸‹é˜ˆå€¼å¯„å­˜å™¨
+  //½«ÉÏÊöÅäÖÃ²ÎÊıÉÏ´«µ½ÅäÖÃ¼Ä´æÆ÷ºÍÉÏÏÂãĞÖµ¼Ä´æÆ÷
   OPT3001_Write_Configuration(&Eye_1);
   OPT3001_Write_High_Limit(&Eye_1, Eye_1.High_Limit);
   OPT3001_Write_Low_Limit(&Eye_1, Eye_1.Low_Limit);
 }
-/************************ç”¨æˆ·å‡½æ•°************************/
+/************************ÓÃ»§º¯Êı************************/
 /**
-  * @brief è¯»å–å½“å‰äº®åº¦
-  * @param OPT3001ï¼šè¯»ç›®æ ‡è®¾å¤‡
-  * @param DATAï¼šè¯»å–å†…å®¹
-  * @retval è¯»æ“ä½œåé¦ˆ
+  * @brief ¶ÁÈ¡µ±Ç°ÁÁ¶È
+  * @param OPT3001£º¶ÁÄ¿±êÉè±¸
+  * @param DATA£º¶ÁÈ¡ÄÚÈİ
+  * @retval ¶Á²Ù×÷·´À¡
   */
 int OPT3001_Read_Brightness(OPT3001 *OPT3001, float *DATA_OUT)
 {
   uint16_t DATA;
 
-  //ç¡®è®¤å½“å‰çš„äº®åº¦å¯è¯»
+  //È·ÈÏµ±Ç°µÄÁÁ¶È¿É¶Á
   if (OPT3001->Configuration.Conversion_Mode == continuous)
   {
     if (OPT3001_IIC_Read(&*OPT3001, R_Result, &DATA) != OPT3001_OK)
     {
       return OPT3001_Error;
     }
-    //æ•°æ®å¤„ç†
+    //Êı¾İ´¦Àí
     *DATA_OUT = 0.01 * (pow(2, (Binary_To_Decimal(&DATA, 12, 15)))) * Binary_To_Decimal(&DATA, 0, 11);
     return OPT3001_OK;
   }
@@ -105,35 +107,33 @@ int OPT3001_Read_Brightness(OPT3001 *OPT3001, float *DATA_OUT)
   }
 }
 /**
-  * @brief è®¾ç½®é«˜é˜ˆå€¼
-  * @param OPT3001ï¼šè®¾ç½®ç›®æ ‡è®¾å¤‡
-  * @param DATAï¼šé˜ˆå€¼
-  * @retval å†™æ“ä½œåé¦ˆ
+  * @brief ÉèÖÃ¸ßãĞÖµ
+  * @param OPT3001£ºÉèÖÃÄ¿±êÉè±¸
+  * @param DATA£ºãĞÖµ
+  * @retval Ğ´²Ù×÷·´À¡
   */
 int OPT3001_Write_High_Limit(OPT3001 *OPT3001, int DATA)
 {
   uint16_t DATA_OUT = (0xb000) | ((DATA * 100) / 2048);
-  printf("%X\r\n", DATA_OUT);
   OPT3001_IIC_Write(&*OPT3001, R_High_Limit, DATA_OUT);
 }
 
 /**
-  * @brief è®¾ç½®ä½é˜ˆå€¼
-  * @param OPT3001ï¼šè®¾ç½®ç›®æ ‡è®¾å¤‡
-  * @param DATAï¼šé˜ˆå€¼
-  * @retval å†™æ“ä½œåé¦ˆ
+  * @brief ÉèÖÃµÍãĞÖµ
+  * @param OPT3001£ºÉèÖÃÄ¿±êÉè±¸
+  * @param DATA£ºãĞÖµ
+  * @retval Ğ´²Ù×÷·´À¡
   */
 int OPT3001_Write_Low_Limit(OPT3001 *OPT3001, int DATA)
 {
   uint16_t DATA_OUT = (0xb000) | ((DATA * 100) / 2048);
-  printf("%X\r\n", DATA_OUT);
   OPT3001_IIC_Write(&*OPT3001, R_Low_Limit, DATA_OUT);
 }
 
 /**
-  * @brief è¯»å–ç”Ÿäº§å‚å•†ID
-  * @param OPT3001ï¼šè¯»ç›®æ ‡è®¾å¤‡
-  * @retval å†™æ“ä½œåé¦ˆ
+  * @brief ¶ÁÈ¡Éú²ú³§ÉÌID
+  * @param OPT3001£º¶ÁÄ¿±êÉè±¸
+  * @retval Ğ´²Ù×÷·´À¡
   */
 int OPT3001_Read_Manufacturer_ID(OPT3001 *OPT3001)
 {
@@ -146,9 +146,9 @@ int OPT3001_Read_Manufacturer_ID(OPT3001 *OPT3001)
   return OPT3001_OK;
 }
 /**
-  * @brief è¯»å–è®¾å¤‡ID
-  * @param OPT3001ï¼šè¯»ç›®æ ‡è®¾å¤‡
-  * @retval å†™æ“ä½œåé¦ˆ
+  * @brief ¶ÁÈ¡Éè±¸ID
+  * @param OPT3001£º¶ÁÄ¿±êÉè±¸
+  * @retval Ğ´²Ù×÷·´À¡
   */
 int OPT3001_Read_Device_ID(OPT3001 *OPT3001)
 {
@@ -161,14 +161,14 @@ int OPT3001_Read_Device_ID(OPT3001 *OPT3001)
   return OPT3001_OK;
 }
 /**
-  * @brief ä¸Šä¼ é…ç½®å¯„å­˜å™¨
-  * @param OPT3001ï¼šè®¾ç½®ç›®æ ‡è®¾å¤‡
-  * @retval å†™æ“ä½œåé¦ˆ
+  * @brief ÉÏ´«ÅäÖÃ¼Ä´æÆ÷
+  * @param OPT3001£ºÉèÖÃÄ¿±êÉè±¸
+  * @retval Ğ´²Ù×÷·´À¡
   */
 int OPT3001_Write_Configuration(OPT3001 *OPT3001)
 {
   OPT3001->Configuration.All = 0x0000;
-  //å½“å‰é‡ç¨‹
+  //µ±Ç°Á¿³Ì
   if ((OPT3001->Configuration.Range == 0x00) || (OPT3001->Configuration.Range == 0x01) || (OPT3001->Configuration.Range == 0x02) || (OPT3001->Configuration.Range == 0x03) || (OPT3001->Configuration.Range == 0x04) || (OPT3001->Configuration.Range == 0x05) || (OPT3001->Configuration.Range == 0x06) || (OPT3001->Configuration.Range == 0x07) || (OPT3001->Configuration.Range == 0x08) || (OPT3001->Configuration.Range == 0x09) || (OPT3001->Configuration.Range == 0x0a) || (OPT3001->Configuration.Range == 0x0b) || (OPT3001->Configuration.Range == 0x0c))
   {
     OPT3001->Configuration.All = Bit_Modification(OPT3001->Configuration.All, 12, 15, OPT3001->Configuration.Range);
@@ -177,7 +177,7 @@ int OPT3001_Write_Configuration(OPT3001 *OPT3001)
   {
     return OPT3001_Error;
   }
-  //è½¬æ¢æ—¶é—´
+  //×ª»»Ê±¼ä
   if ((OPT3001->Configuration.Conversion_Time == Fast_Conversion) || (OPT3001->Configuration.Conversion_Time == completely_Conversion))
   {
     OPT3001->Configuration.All = Bit_Modification(OPT3001->Configuration.All, 11, 11, OPT3001->Configuration.Conversion_Time);
@@ -186,7 +186,7 @@ int OPT3001_Write_Configuration(OPT3001 *OPT3001)
   {
     return OPT3001_Error;
   }
-  //è½¬æ¢æ¨¡å¼
+  //×ª»»Ä£Ê½
   if ((OPT3001->Configuration.Conversion_Mode == default) || (OPT3001->Configuration.Conversion_Mode == single) || (OPT3001->Configuration.Conversion_Mode == continuous))
   {
     OPT3001->Configuration.All = Bit_Modification(OPT3001->Configuration.All, 9, 10, OPT3001->Configuration.Conversion_Mode);
@@ -195,7 +195,7 @@ int OPT3001_Write_Configuration(OPT3001 *OPT3001)
   {
     return OPT3001_Error;
   }
-  //ä¸­æ–­æ¨¡å¼
+  //ÖĞ¶ÏÄ£Ê½
   if ((OPT3001->Configuration.Latch_field_Bit == transparent_Hysteresis_style) || (OPT3001->Configuration.Latch_field_Bit == latched_Window_style))
   {
     OPT3001->Configuration.All = Bit_Modification(OPT3001->Configuration.All, 4, 4, OPT3001->Configuration.Latch_field_Bit);
@@ -204,7 +204,7 @@ int OPT3001_Write_Configuration(OPT3001 *OPT3001)
   {
     return OPT3001_Error;
   }
-  //INTææ€§
+  //INT¼«ĞÔ
   if ((OPT3001->Configuration.Polarity_Field_Bit == Low_efficient) || (OPT3001->Configuration.Polarity_Field_Bit == High_efficient))
   {
     OPT3001->Configuration.All = Bit_Modification(OPT3001->Configuration.All, 3, 3, OPT3001->Configuration.Polarity_Field_Bit);
@@ -213,7 +213,7 @@ int OPT3001_Write_Configuration(OPT3001 *OPT3001)
   {
     return OPT3001_Error;
   }
-  //å±è”½æŒ‡æ•°å­—æ®µ
+  //ÆÁ±ÎÖ¸Êı×Ö¶Î
   if ((OPT3001->Configuration.Mask_Exponent_Field_Bit == Exponent_show) || (OPT3001->Configuration.Mask_Exponent_Field_Bit == Exponent_shield))
   {
     OPT3001->Configuration.All = Bit_Modification(OPT3001->Configuration.All, 2, 2, OPT3001->Configuration.Mask_Exponent_Field_Bit);
@@ -222,7 +222,7 @@ int OPT3001_Write_Configuration(OPT3001 *OPT3001)
   {
     return OPT3001_Error;
   }
-  //æ•…éšœè®¡æ•°å­—æ®µ
+  //¹ÊÕÏ¼ÆÊı×Ö¶Î
   if ((OPT3001->Configuration.Fault_Count_Field_Bit == Fault_One) || (OPT3001->Configuration.Fault_Count_Field_Bit == Fault_Two) || (OPT3001->Configuration.Fault_Count_Field_Bit == Fault_Four) || (OPT3001->Configuration.Fault_Count_Field_Bit == Fault_Eight))
   {
     OPT3001->Configuration.All = Bit_Modification(OPT3001->Configuration.All, 0, 1, OPT3001->Configuration.Fault_Count_Field_Bit);
@@ -242,13 +242,13 @@ int OPT3001_Write_Configuration(OPT3001 *OPT3001)
 }
 
 /**
-  * @brief è¯»å–é…ç½®å¯„å­˜å™¨
-  * @param OPT3001ï¼šè¯»ç›®æ ‡è®¾å¤‡
-  * @retval å†™æ“ä½œåé¦ˆ
+  * @brief ¶ÁÈ¡ÅäÖÃ¼Ä´æÆ÷
+  * @param OPT3001£º¶ÁÄ¿±êÉè±¸
+  * @retval Ğ´²Ù×÷·´À¡
   */
 int OPT3001_Read_Configuration(OPT3001 *OPT3001)
 {
-  //è¯»å–é…ç½®å¯„å­˜å™¨çš„æ•°å€¼ï¼Œå­˜äºDATAä¸­
+  //¶ÁÈ¡ÅäÖÃ¼Ä´æÆ÷µÄÊıÖµ£¬´æÓÚDATAÖĞ
   uint16_t DATA;
   if (OPT3001_IIC_Read(OPT3001, R_Configuration, &DATA) != OPT3001_OK)
   {
@@ -258,7 +258,7 @@ int OPT3001_Read_Configuration(OPT3001 *OPT3001)
   {
     OPT3001->Configuration.All = DATA;
   }
-  //é«˜æ ‡å¿—ä½
+  //¸ß±êÖ¾Î»
   if (Extract_text(&DATA, 6) != 3)
   {
     OPT3001->Configuration.High_Limit_Bit = Extract_text(&DATA, 6);
@@ -267,7 +267,7 @@ int OPT3001_Read_Configuration(OPT3001 *OPT3001)
   {
     return OPT3001_Error;
   }
-  //ä½æ ‡å¿—ä½
+  //µÍ±êÖ¾Î»
   if (Extract_text(&DATA, 5) != 3)
   {
     OPT3001->Configuration.Low_Limit_Bit = Extract_text(&DATA, 5);
@@ -286,29 +286,29 @@ int OPT3001_Reset(OPT3001 *OPT3001)
     return OPT3001_Error;
   }
 }
-/************************ä¸­æ–­å‡½æ•°************************/
+/************************ÖĞ¶Ïº¯Êı************************/
 int OPT3001_INT(OPT3001 *OPT3001)
 {
-  //ä¸­æ–­æ ‡å¿—
+  //ÖĞ¶Ï±êÖ¾
   OPT3001_Read_Configuration(&*OPT3001);
-  //åˆ¤æ–­é«˜ä½æ ‡å¿—ä½
+  //ÅĞ¶Ï¸ßµÍ±êÖ¾Î»
   if (OPT3001->Configuration.Low_Limit_Bit == 1)
   {
     OPT3001->Configuration.Low_Limit_Bit = 0;
-    printf("ä½ä¸­æ–­ \r\n");
+    printf("µÍÖĞ¶Ï \r\n");
   }
   if (OPT3001->Configuration.High_Limit_Bit == 1)
   {
     OPT3001->Configuration.High_Limit_Bit = 0;
-    printf("é«˜ä¸­æ–­ \r\n");
+    printf("¸ßÖĞ¶Ï \r\n");
   }
 }
-/************************å†…éƒ¨å‡½æ•°************************/
+/************************ÄÚ²¿º¯Êı************************/
 /**
-  * @brief IICè¯»å–
-  * @param OPT3001ï¼šè¯»ç›®æ ‡è®¾å¤‡
-  * @param DATAï¼šæ•°æ®
-  * @retval å†™æ“ä½œåé¦ˆ
+  * @brief IIC¶ÁÈ¡
+  * @param OPT3001£º¶ÁÄ¿±êÉè±¸
+  * @param DATA£ºÊı¾İ
+  * @retval Ğ´²Ù×÷·´À¡
   */
 int OPT3001_IIC_Read(OPT3001 *OPT3001, uint8_t ADDR, uint16_t *DATA)
 {
@@ -326,10 +326,10 @@ int OPT3001_IIC_Read(OPT3001 *OPT3001, uint8_t ADDR, uint16_t *DATA)
 }
 
 /**
-  * @brief IICå†™
-  * @param OPT3001ï¼šå†™ç›®æ ‡è®¾å¤‡
-  * @param DATAï¼šæ•°æ®
-  * @retval å†™æ“ä½œåé¦ˆ
+  * @brief IICĞ´
+  * @param OPT3001£ºĞ´Ä¿±êÉè±¸
+  * @param DATA£ºÊı¾İ
+  * @retval Ğ´²Ù×÷·´À¡
   */
 int OPT3001_IIC_Write(OPT3001 *OPT3001, uint8_t ADDR, uint16_t DATA)
 {
@@ -345,17 +345,17 @@ int OPT3001_IIC_Write(OPT3001 *OPT3001, uint8_t ADDR, uint16_t DATA)
 }
 
 /**
-* @brief  æå–16ä½äºŒè¿›åˆ¶æ•°æ®ä¸­ä¸€ä½ï¼Œè¿”å›è¯¥ä½æ˜¯0æˆ–1
-* @param	DATA:åŸå§‹æ•°æ®
-* @param	NUMï¼šæ•°æ®ä½ç½®
-* @retval æ•°æ®å€¼
+* @brief  ÌáÈ¡16Î»¶ş½øÖÆÊı¾İÖĞÒ»Î»£¬·µ»Ø¸ÃÎ»ÊÇ0»ò1
+* @param	DATA:Ô­Ê¼Êı¾İ
+* @param	NUM£ºÊı¾İÎ»ÖÃ
+* @retval Êı¾İÖµ
 */
 int Extract_text(uint16_t *DATA, int NUM)
 {
   int RE_NUM = 3;
   if (NUM < 0 || NUM > 15)
   {
-    printf("æå–å‘ç”Ÿé”™è¯¯");
+    printf("ÌáÈ¡·¢Éú´íÎó");
     while (1)
       ;
     return RE_NUM;
@@ -372,27 +372,27 @@ int Extract_text(uint16_t *DATA, int NUM)
 }
 
 /**
-* @brief  æå–åå…­ä½äºŒè¿›åˆ¶ä¸­çš„ä¸€æ®µï¼Œè½¬æ¢ä¸ºåè¿›åˆ¶
-* @param	DATA:åŸå§‹æ•°æ®
-* @param	NUM_Startï¼šæ•°æ®ä½ç½®å¼€å§‹
-* @param	NUM_Stopï¼šæ•°æ®ä½ç½®åœæ­¢
-* @retval æ•°æ®å€¼
+* @brief  ÌáÈ¡Ê®ÁùÎ»¶ş½øÖÆÖĞµÄÒ»¶Î£¬×ª»»ÎªÊ®½øÖÆ
+* @param	DATA:Ô­Ê¼Êı¾İ
+* @param	NUM_Start£ºÊı¾İÎ»ÖÃ¿ªÊ¼
+* @param	NUM_Stop£ºÊı¾İÎ»ÖÃÍ£Ö¹
+* @retval Êı¾İÖµ
 */
 int Binary_To_Decimal(uint16_t *DATA, int NUM_Start, int NUM_Stop)
 {
-  //å‡½æ•°å¼€å¯æ¡ä»¶ï¼šå¼€å§‹å’Œåœæ­¢ä½ç½®éœ€è¦å¤§äº0å°äº15ï¼Œå¹¶ä¸”åœæ­¢ä½ç½®å¤§äºå¼€å§‹ä½ç½®
+  //º¯Êı¿ªÆôÌõ¼ş£º¿ªÊ¼ºÍÍ£Ö¹Î»ÖÃĞèÒª´óÓÚ0Ğ¡ÓÚ15£¬²¢ÇÒÍ£Ö¹Î»ÖÃ´óÓÚ¿ªÊ¼Î»ÖÃ
   if ((NUM_Start < 0 || NUM_Start > 15) || (NUM_Stop < 0 && NUM_Stop > 15) || (NUM_Start > NUM_Stop))
   {
-    printf("è½¬æ¢å‘é€é”™è¯¯\r\n");
+    printf("×ª»»·¢ËÍ´íÎó\r\n");
     return (-1);
   }
-  //è¯»å–äºŒè¿›åˆ¶ä½
+  //¶ÁÈ¡¶ş½øÖÆÎ»
   int NUM_B[16] = {0};
   for (int i = 0; i < ((NUM_Stop - NUM_Start) + 1); i++)
   {
     NUM_B[i] = Extract_text(DATA, NUM_Start + i);
   }
-  //è½¬æ¢ä¸ºåè¿›åˆ¶
+  //×ª»»ÎªÊ®½øÖÆ
   int NUM_D = 0;
   for (int i = 0; i < ((NUM_Stop - NUM_Start) + 1); i++)
   {
@@ -402,12 +402,12 @@ int Binary_To_Decimal(uint16_t *DATA, int NUM_Start, int NUM_Stop)
 }
 
 /**
-  * @brief ä½æ“ä½œ
-  * @param Reg:è¢«ä¿®æ”¹çš„å€¼
-  * @param Bit_Start:å¼€å§‹ä¿®æ”¹çš„ä½ç½®
-  * @param Bit_Stop:ç»“æŸä¿®æ”¹çš„ä½ç½®
-  * @param Value:éœ€è¦ä¿®æ”¹æˆçš„å€¼(äºŒè¿›åˆ¶è¡¨ç¤º)
-  * @retval è¿”å›ä¿®æ”¹å®Œæˆåçš„å˜é‡
+  * @brief Î»²Ù×÷
+  * @param Reg:±»ĞŞ¸ÄµÄÖµ
+  * @param Bit_Start:¿ªÊ¼ĞŞ¸ÄµÄÎ»ÖÃ
+  * @param Bit_Stop:½áÊøĞŞ¸ÄµÄÎ»ÖÃ
+  * @param Value:ĞèÒªĞŞ¸Ä³ÉµÄÖµ(¶ş½øÖÆ±íÊ¾)
+  * @retval ·µ»ØĞŞ¸ÄÍê³ÉºóµÄ±äÁ¿
   */
 uint16_t Bit_Modification(uint16_t Reg, int Bit_Start, int Bit_Stop, uint16_t Value)
 {

@@ -8,88 +8,88 @@ extern "C"
 #endif
 
 #include "main.h"
-//è¿”å›å€¼
+//·µ»ØÖµ
 #define OPT3001_OK 0
 #define OPT3001_Error 1
-//å¯„å­˜å™¨åœ°å€
-#define R_Result 0x00 //ç»“æœå¯„å­˜å™¨
-#define R_Configuration 0x01  //é…ç½®å¯„å­˜å™¨
-#define R_Low_Limit 0x02 //ä½é˜ˆå€¼å¯„å­˜å™¨
-#define R_High_Limit 0x03//é«˜é˜ˆå€¼å¯„å­˜å™¨
-#define R_Manufacturer_ID 0x7e//åˆ¶é€ å‚å•†ID
-#define R_Device_ID 0x7f//è®¾å¤‡å‚å•†ID
-//è½¬æ¢æ—¶é—´
-#define Fast_Conversion 0x00       //å¿«é€Ÿè½¬æ¢
-#define completely_Conversion 0x01 //å®Œå…¨ç²¾åº¦è½¬æ¢
-//è½¬æ¢æ¨¡å¼
-#define default 0x00    //å…³æœº
-#define single 0x01     //å•æ¬¡è½¬æ¢
-#define continuous 0x2 //è¿ç»­è½¬æ¢
-//ä¸­æ–­æ¨¡å¼
-#define transparent_Hysteresis_style 0x00 //é€æ˜æ»åå¼
-#define latched_Window_style 0x01         //é”çª—å¼
-//ä¸­æ–­å¼•è„šææ€§æ¨¡å¼
-#define Low_efficient 0x00  //ä½ç”µå¹³æœ‰æ•ˆ
-#define High_efficient 0x01 //é«˜ç”µå¹³æœ‰æ•ˆ
-//æ˜¯å¦æ˜¾ç¤ºæŒ‡æ•°å­—æ®µ
-#define Exponent_show 0x00   //æ˜¾ç¤ºæŒ‡æ•°å­—æ®µ
-#define Exponent_shield 0x01 //å±è”½æŒ‡æ•°å­—æ®µ
-//æ•…éšœæŠ¥è­¦æ•°é‡
-#define Fault_One 0x00   //ä¸€ä¸ªæ•…éšœ
-#define Fault_Two 0x01   //ä¸¤ä¸ªæ•…éšœ
-#define Fault_Four 0x2  //å››ä¸ªæ•…éšœ
-#define Fault_Eight 0x3 //å…«ä¸ªæ•…éšœ
-//é‡ç¨‹é€‰æ‹©
-#define Range_40_95 0x00//é‡ç¨‹ï¼š40.95
-#define Range_81_90 0x01//é‡ç¨‹ï¼š81.90
-#define Range_163_80 0x02//é‡ç¨‹ï¼š163.80
-#define Range_327_60 0x03//é‡ç¨‹ï¼š327.60
-#define Range_655_20 0x04//é‡ç¨‹ï¼š655.20
-#define Range_1310_40 0x05//é‡ç¨‹ï¼š1310.40
-#define Range_2620_80 0x06//é‡ç¨‹ï¼š2620.80
-#define Range_5241_60 0x07//é‡ç¨‹ï¼š5241.60
-#define Range_10483_20 0x08//é‡ç¨‹ï¼š10483.20
-#define Range_20966_40 0x09//é‡ç¨‹ï¼š20966.40
-#define Range_41932_80 0x0a//é‡ç¨‹ï¼š41932.80
-#define Range_83865_60 0x0b//é‡ç¨‹ï¼š83865.60
-#define Range_AUTO 0x0c//é‡ç¨‹ï¼šè‡ªåŠ¨é‡ç¨‹
-    //é…ç½®å¯„å­˜å™¨ç»“æ„ä½“
+//¼Ä´æÆ÷µØÖ·
+#define R_Result 0x00 //½á¹û¼Ä´æÆ÷
+#define R_Configuration 0x01  //ÅäÖÃ¼Ä´æÆ÷
+#define R_Low_Limit 0x02 //µÍãĞÖµ¼Ä´æÆ÷
+#define R_High_Limit 0x03//¸ßãĞÖµ¼Ä´æÆ÷
+#define R_Manufacturer_ID 0x7e//ÖÆÔì³§ÉÌID
+#define R_Device_ID 0x7f//Éè±¸³§ÉÌID
+//×ª»»Ê±¼ä
+#define Fast_Conversion 0x00       //¿ìËÙ×ª»»
+#define completely_Conversion 0x01 //ÍêÈ«¾«¶È×ª»»
+//×ª»»Ä£Ê½
+#define default 0x00    //¹Ø»ú
+#define single 0x01     //µ¥´Î×ª»»
+#define continuous 0x2 //Á¬Ğø×ª»»
+//ÖĞ¶ÏÄ£Ê½
+#define transparent_Hysteresis_style 0x00 //Í¸Ã÷ÖÍºóÊ½
+#define latched_Window_style 0x01         //Ëø´°Ê½
+//ÖĞ¶ÏÒı½Å¼«ĞÔÄ£Ê½
+#define Low_efficient 0x00  //µÍµçÆ½ÓĞĞ§
+#define High_efficient 0x01 //¸ßµçÆ½ÓĞĞ§
+//ÊÇ·ñÏÔÊ¾Ö¸Êı×Ö¶Î
+#define Exponent_show 0x00   //ÏÔÊ¾Ö¸Êı×Ö¶Î
+#define Exponent_shield 0x01 //ÆÁ±ÎÖ¸Êı×Ö¶Î
+//¹ÊÕÏ±¨¾¯ÊıÁ¿
+#define Fault_One 0x00   //Ò»¸ö¹ÊÕÏ
+#define Fault_Two 0x01   //Á½¸ö¹ÊÕÏ
+#define Fault_Four 0x2  //ËÄ¸ö¹ÊÕÏ
+#define Fault_Eight 0x3 //°Ë¸ö¹ÊÕÏ
+//Á¿³ÌÑ¡Ôñ
+#define Range_40_95 0x00//Á¿³Ì£º40.95
+#define Range_81_90 0x01//Á¿³Ì£º81.90
+#define Range_163_80 0x02//Á¿³Ì£º163.80
+#define Range_327_60 0x03//Á¿³Ì£º327.60
+#define Range_655_20 0x04//Á¿³Ì£º655.20
+#define Range_1310_40 0x05//Á¿³Ì£º1310.40
+#define Range_2620_80 0x06//Á¿³Ì£º2620.80
+#define Range_5241_60 0x07//Á¿³Ì£º5241.60
+#define Range_10483_20 0x08//Á¿³Ì£º10483.20
+#define Range_20966_40 0x09//Á¿³Ì£º20966.40
+#define Range_41932_80 0x0a//Á¿³Ì£º41932.80
+#define Range_83865_60 0x0b//Á¿³Ì£º83865.60
+#define Range_AUTO 0x0c//Á¿³Ì£º×Ô¶¯Á¿³Ì
+    //ÅäÖÃ¼Ä´æÆ÷½á¹¹Ìå
     struct RS_Configuration
     {
         uint16_t All;
-        int Range;                      //å½“å‰é‡ç¨‹
-        int Conversion_Time;            //è½¬æ¢æ—¶é—´
-        uint16_t Conversion_Mode;       //è½¬æ¢æ¨¡å¼
-        int overflow_Bit;               //æº¢å‡ºæŒ‡ç¤º
-        int Conversion_Finish_Bit;      //è½¬æ¢å®Œæˆæ ‡å¿—ä½
-        int High_Limit_Bit;             //é«˜æ ‡å¿—ä½
-        int Low_Limit_Bit;              //ä½æ ‡å¿—ä½
-        int Latch_field_Bit;            //ä¸­æ–­æ¨¡å¼
-        int Polarity_Field_Bit;         //INTææ€§
-        int Mask_Exponent_Field_Bit;    //å±è”½æŒ‡æ•°å­—æ®µ
-        uint16_t Fault_Count_Field_Bit; //æ•…éšœè®¡æ•°å­—æ®µ
+        int Range;                      //µ±Ç°Á¿³Ì
+        int Conversion_Time;            //×ª»»Ê±¼ä
+        uint16_t Conversion_Mode;       //×ª»»Ä£Ê½
+        int overflow_Bit;               //Òç³öÖ¸Ê¾
+        int Conversion_Finish_Bit;      //×ª»»Íê³É±êÖ¾Î»
+        int High_Limit_Bit;             //¸ß±êÖ¾Î»
+        int Low_Limit_Bit;              //µÍ±êÖ¾Î»
+        int Latch_field_Bit;            //ÖĞ¶ÏÄ£Ê½
+        int Polarity_Field_Bit;         //INT¼«ĞÔ
+        int Mask_Exponent_Field_Bit;    //ÆÁ±ÎÖ¸Êı×Ö¶Î
+        uint16_t Fault_Count_Field_Bit; //¹ÊÕÏ¼ÆÊı×Ö¶Î
     };
 
     typedef struct __OPT3001
     {
-        //ä¸­æ–­å¼•è„š
+        //ÖĞ¶ÏÒı½Å
         uint16_t INT_Pin;
         GPIO_TypeDef *INT_Prot;
-        //æ‰€ä½¿ç”¨çš„IIC
+        //ËùÊ¹ÓÃµÄIIC
         I2C_HandleTypeDef IIC_Aisle;
-        //IICåœ°å€
+        //IICµØÖ·
         uint8_t IIC_ADDR;
-        //æœ€æ–°æ•°å€¼
+        //×îĞÂÊıÖµ
         float Current_Figure;
-        //ä½é˜ˆå€¼
+        //µÍãĞÖµ
         int Low_Limit;
-        //é«˜é˜ˆå€¼
+        //¸ßãĞÖµ
         int High_Limit;
-        /*é…ç½®å¯„å­˜å™¨æ•°å€¼*/
+        /*ÅäÖÃ¼Ä´æÆ÷ÊıÖµ*/
         struct RS_Configuration Configuration;
-        //åˆ¶é€ å•†ID
+        //ÖÆÔìÉÌID
         uint16_t Manufacturer_ID;
-        //è®¾å¤‡ID
+        //Éè±¸ID
         uint16_t Device_ID;
 
     } OPT3001;
