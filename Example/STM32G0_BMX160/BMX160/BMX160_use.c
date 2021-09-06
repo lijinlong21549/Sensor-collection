@@ -32,14 +32,14 @@ int BMX160_Init(void)
     BMX160_Get_ChipID(&BMX160_1, &DATA);
     printf("%X\n", DATA);
     //重置设备
-    BMX160_CMD(&BMX160_1, BMX106_CMD_Softreset);
+    BMX160_CMD(&BMX160_1, BMX160_CMD_Softreset);
     HAL_Delay(100);
     //将三个传感器设置为普通模式
-    BMX160_CMD(&BMX160_1, BMX106_CMD_PMU_ACC_Normal);
+    BMX160_CMD(&BMX160_1, BMX160_CMD_PMU_ACC_Normal);
     HAL_Delay(10);
-    BMX160_CMD(&BMX160_1, BMX106_CMD_PMU_GYR_Normal);
+    BMX160_CMD(&BMX160_1, BMX160_CMD_PMU_GYR_Normal);
     HAL_Delay(80);
-    BMX160_CMD(&BMX160_1, BMX106_CMD_PMU_MAG_Normal);
+    BMX160_CMD(&BMX160_1, BMX160_CMD_PMU_MAG_Normal);
     HAL_Delay(10);
     //读取功率模式
     int Mode[3];
@@ -570,7 +570,7 @@ int BMX160_MAG_Sampling_Mode(Sensor_BMX160 *BMX160, int MAG_XY_Mode, int MAG_Z_M
     }
 
     //CMD发送0x19命令
-    if (BMX160_CMD(&*BMX160, BMX106_CMD_PMU_MAG_Normal) != BMX160_OK)
+    if (BMX160_CMD(&*BMX160, BMX160_CMD_PMU_MAG_Normal) != BMX160_OK)
     {
         return BMX160_Error;
     }
@@ -710,7 +710,7 @@ int BMX160_MAG_Sampling_Mode(Sensor_BMX160 *BMX160, int MAG_XY_Mode, int MAG_Z_M
     }
     if (MAG_XY_Mode == BMX160_MAG_Mode_LowPower && MAG_Z_Mode == BMX160_MAG_Mode_LowPower)
     {
-        if (BMX160_CMD(&*BMX160, BMX106_CMD_PMU_MAG_LowPower) != BMX160_OK)
+        if (BMX160_CMD(&*BMX160, BMX160_CMD_PMU_MAG_LowPower) != BMX160_OK)
         {
             return BMX160_Error;
         }
@@ -929,7 +929,7 @@ int BMX160_Auto_Calibration(Sensor_BMX160 *BMX160)
         return BMX160_Error;
     }
     //发送校准命令
-    if (BMX160_CMD(&*BMX160, BMX106_CMD_StartFoc) != BMX160_OK)
+    if (BMX160_CMD(&*BMX160, BMX160_CMD_StartFoc) != BMX160_OK)
     {
         return BMX160_Error;
     }

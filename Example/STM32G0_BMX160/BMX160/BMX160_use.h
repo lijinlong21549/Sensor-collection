@@ -24,21 +24,21 @@ extern "C"
 #define BMX160_POW_MODE_LowPower 0x2    //低功耗模式
 #define BMX160_POW_MODE_FastStartUp 0x3 //快速启动模式
 //CMD命令
-#define BMX106_CMD_PMU_ACC_Suspend 0x10     //加速度计暂停模式
-#define BMX106_CMD_PMU_ACC_Normal 0x11      //加速度计普通模式
-#define BMX106_CMD_PMU_ACC_LowPower 0x12    //加速度计低功耗模式
-#define BMX106_CMD_PMU_GYR_Suspend 0x14     //陀螺仪计暂停模式
-#define BMX106_CMD_PMU_GYR_Normal 0x15      //陀螺仪计普通模式
-#define BMX106_CMD_PMU_GYR_FastStartUp 0x17 //陀螺仪计快速启动模式
-#define BMX106_CMD_PMU_MAG_Suspend 0x18     //磁力计计暂停模式
-#define BMX106_CMD_PMU_MAG_Normal 0x19      //磁力计计普通模式
-#define BMX106_CMD_PMU_MAG_LowPower 0x1a    //磁力计计低功耗模式
-#define BMX106_CMD_StartFoc 0x03            //加速度和陀螺仪的快速偏移校准
-#define BMX106_CMD_ProgNvm 0xa0             //写入NVM
-#define BMX106_CMD_FifoFlush 0xb0           //清除Fifo中所有数据
-#define BMX106_CMD_IntReset 0xb1            //重置中断引擎
-#define BMX106_CMD_Softreset 0xb6           //重启
-#define BMX106_CMD_StepCntClr 0xb2          //步数计数器重置
+#define BMX160_CMD_PMU_ACC_Suspend 0x10     //加速度计暂停模式
+#define BMX160_CMD_PMU_ACC_Normal 0x11      //加速度计普通模式
+#define BMX160_CMD_PMU_ACC_LowPower 0x12    //加速度计低功耗模式
+#define BMX160_CMD_PMU_GYR_Suspend 0x14     //陀螺仪计暂停模式
+#define BMX160_CMD_PMU_GYR_Normal 0x15      //陀螺仪计普通模式
+#define BMX160_CMD_PMU_GYR_FastStartUp 0x17 //陀螺仪计快速启动模式
+#define BMX160_CMD_PMU_MAG_Suspend 0x18     //磁力计计暂停模式
+#define BMX160_CMD_PMU_MAG_Normal 0x19      //磁力计计普通模式
+#define BMX160_CMD_PMU_MAG_LowPower 0x1a    //磁力计计低功耗模式
+#define BMX160_CMD_StartFoc 0x03            //加速度和陀螺仪的快速偏移校准
+#define BMX160_CMD_ProgNvm 0xa0             //写入NVM
+#define BMX160_CMD_FifoFlush 0xb0           //清除Fifo中所有数据
+#define BMX160_CMD_IntReset 0xb1            //重置中断引擎
+#define BMX160_CMD_Softreset 0xb6           //重启
+#define BMX160_CMD_StepCntClr 0xb2          //步数计数器重置
 
     /*****************功能函数*****************/
 
