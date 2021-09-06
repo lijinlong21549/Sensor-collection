@@ -1,0 +1,1 @@
+stm32g0_bmx160\startup_stm32g071xx.o: startup_stm32g071xx.s
