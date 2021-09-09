@@ -1,0 +1,81 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.29.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Administrator,  , LIC=47GU5-GQLMK-DY8V3-A0MUC-I2FWP-VULZ1
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.27.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.27.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.2.0
+Target DLL:      CMSIS_AGDI.dll V1.31.9.0
+Dialog DLL:      TARMCM1.DLL V1.14.1.0
+ 
+<h2>Project:</h2>
+H:\Github\MR-Z-Mini-oscilloscope\Single_module_development\15.sensor\Example\STM32G0_BME280\MDK-ARM\STM32G0_BME280.uvprojx
+Project File Date:  09/09/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'STM32G0_BME280'
+compiling BME280.c...
+..\Core\Src\BME280.c(65): warning:  #520-D: initialization with "{...}" expected for aggregate object
+      float DATA1[3] = 0;
+..\Core\Src\BME280.c(222): warning:  #177-D: variable "v_x1"  was declared but never referenced
+      uint32_t v_x1 = {0};
+..\Core\Src\BME280.c(348): warning:  #940-D: missing return statement at end of non-void function "BME280_Get_DIG" 
+  }
+..\Core\Src\BME280.c(566): warning:  #940-D: missing return statement at end of non-void function "BME280_SPI_Write" 
+  }
+..\Core\Src\BME280.c(576): warning:  #940-D: missing return statement at end of non-void function "BME280_SPI_Read" 
+  }
+..\Core\Src\BME280.c(600): warning:  #940-D: missing return statement at end of non-void function "BME280_Write" 
+  }
+..\Core\Src\BME280.c(625): warning:  #940-D: missing return statement at end of non-void function "BME280_Read" 
+  }
+..\Core\Src\BME280.c(641): warning:  #111-D: statement is unreachable
+          return RE_NUM;
+..\Core\Src\BME280.c(679): warning:  #223-D: function "pow" declared implicitly
+          NUM_D = NUM_D + (NUM_B[i] * pow(2, i));
+..\Core\Src\BME280.c(702): warning:  #1-D: last line of file ends without a newline
+  }
+..\Core\Src\BME280.c: 10 warnings, 0 errors
+linking...
+Program Size: Code=13174 RO-data=342 RW-data=20 ZI-data=1452  
+FromELF: creating hex file...
+"STM32G0_BME280\STM32G0_BME280.axf" - 0 Error(s), 10 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.4.0.pack
+                ARM.CMSIS.5.4.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.1.2
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32G0xx_DFP.1.3.0.pack
+                Keil.STM32G0xx_DFP.1.3.0
+                STMicroelectronics STM32G0 Series Device Support
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_STM32G0_BME280
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include
+  C:\Keil_v5\ARM\PACK\Keil\STM32G0xx_DFP\1.3.0\Drivers\CMSIS\Device\ST\STM32G0xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.1.2
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>
